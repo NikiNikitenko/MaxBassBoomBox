@@ -49,7 +49,7 @@ public class EnemyMovementController : MonoBehaviour, IPooledObject
 
     public void Remove()
     {
-       // movePiont.parent = transform;
+        movePiont.parent = transform;
        // enemyGO.SetActive(false);
         objectPooler.SpawnFromPool("Enemy");
 
@@ -95,12 +95,13 @@ public class EnemyMovementController : MonoBehaviour, IPooledObject
             Remove();
         }
 
-        Collider2D[] enemys = Physics2D.OverlapCircleAll(transform.position, 0.2f, enemy);
+        //Collider2D[] enemys = Physics2D.OverlapCircleAll(transform.position, 0.2f, enemy);
 
-        if (enemys.Length > 2)
-        {
-            OnObjectSpawn();
-        }
+        //if (enemys.Length > 2)
+        //{
+        //    transform.position -= movePiont.position;
+        //    //OnObjectSpawn();
+        //}
 
     }
     void ChangeWalkingDirection()
