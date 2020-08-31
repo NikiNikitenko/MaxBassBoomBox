@@ -99,6 +99,7 @@ public class EnemyMovementController : MonoBehaviour, IPooledObject
         {
             moveX();
         }
+        
 
         //Collider2D[] enemys = Physics2D.OverlapCircleAll(transform.position, 0.2f, enemy);
 
