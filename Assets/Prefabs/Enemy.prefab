@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6873391229314238084}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Enemy Movement Point
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -185,7 +185,7 @@ MonoBehaviour:
     m_Bits: 512
   enemy:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 0
   enemyGO: {fileID: 6873391231248903060}
 --- !u!61 &8542733966822578034
 BoxCollider2D:

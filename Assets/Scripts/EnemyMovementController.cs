@@ -62,7 +62,7 @@ public class EnemyMovementController : MonoBehaviour, IPooledObject
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
         Vector3 soundWawePosition = new Vector3(0, 0, 0);
@@ -83,16 +83,21 @@ public class EnemyMovementController : MonoBehaviour, IPooledObject
                 if (FindObjectOfType<MovementController>().direction != new Vector3(0, 0, 0))
                 {
                     ChangeWalkingDirection();
-                    movePiont.position += direction;
+                        movePiont.position += direction;
 
                 }
             }
 
         }
+                    
 
         if (Physics2D.OverlapCircle(transform.position, 0.01f, whatStopsMovement))
         {
             Remove();
+        }
+        if (Physics2D.OverlapCircle(transform.position, 1.3f, enemy))
+        {
+            moveX();
         }
 
         //Collider2D[] enemys = Physics2D.OverlapCircleAll(transform.position, 0.2f, enemy);
